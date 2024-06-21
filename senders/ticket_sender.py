@@ -24,6 +24,8 @@ async def send_tickets():
     #print("\n".join(tickets_info_str))
     await bot.send_message(292667494, "\n---\n".join(tickets_info_str), parse_mode="Markdown",
                            disable_web_page_preview=True, disable_notification=not is_with_notification)
+    await bot.send_message(587876973, "\n---\n".join(tickets_info_str), parse_mode="Markdown",
+                           disable_web_page_preview=True, disable_notification=not is_with_notification)
 
 def is_now_work_hours():
     timezone = pytz.timezone('Europe/Amsterdam')
